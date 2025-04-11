@@ -31,8 +31,8 @@ hf-login:
 
 push-hub: 
 	huggingface-cli upload codemaker2015/Drug-Classification ./app --repo-type=space --commit-message="Sync App files"
-	huggingface-cli upload codemaker2015/Drug-Classification ./model /model --repo-type=space --commit-message="Sync Model"
-	huggingface-cli upload codemaker2015/Drug-Classification ./results /metrics --repo-type=space --commit-message="Sync Model"
+	huggingface-cli upload codemaker2015/Drug-Classification ./model model --repo-type=space --commit-message="Sync Model"
+	huggingface-cli upload codemaker2015/Drug-Classification ./results metrics --repo-type=space --commit-message="Sync Model"
 
 deploy: hf-login push-hub
 
